@@ -1,4 +1,3 @@
-
 const fs = require('fs');
 
 
@@ -28,6 +27,3 @@ setTimeout(() => {
         console.log('file is deleted.')
     })
 }, 4000)
-
-
-
