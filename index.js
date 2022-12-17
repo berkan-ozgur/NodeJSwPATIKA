@@ -1,1 +1,2 @@
-console.log('Log yazıldı')
+const moment = require('moment');
+console.log(moment().format("MMM Do YY"));
