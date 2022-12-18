@@ -1,26 +1,25 @@
-const http = require('http')
+const express = require('express')
 
-const server = http.createServer((req, res) => {
-    const url = req.url;
-    if (url === '/') {
-        res.writeHead(200, { 'Content-Type': 'text/html' })
-        res.write('<h1>Index sayfası burası.</h1>')
-    }
+const app = express()
 
-    else if (url === '/about') {
-        res.writeHead(200, { 'Content-Type': 'text/html' })
-        res.write('About sayfası burası.')
-    }
-    else {
-        res.writeHead(404, { 'Content-Type': 'text/html' })
-        res.write('<h1>404 sayfa bulunamadı.</h1>')
-    }
-    res.end();
-});
+app.get('/', (req, res) => {
+    res.status(200).send('INDEX SAYFASI')
+})
+
+app.get('/about', (req, res) => {
+    res.status(200).send('ABOUT SAYFASI')
+})
+
+app.get('/contact', (req, res) => {
+    res.status(200).send('CONTACT SAYFASI')
+})
+
+app.get('*', (req, res) => {
+    res.status(404).send('404 SAYFA BULUNAMADI')
+})
 
 const port = 3000;
 
-server.listen(port, () => {
-    console.log(`Sunucu ${port}'de başlatıldı. `)
+app.listen(port, () => {
+    console.log(`Sunucu port ${port} da çalışmaya başladı...`)
 })
-

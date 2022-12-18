@@ -1,0 +1,22 @@
+{
+  "name": "node.js-beginning",
+  "version": "1.0.0",
+  "description": "This project is created for better understanding Node.JS concepts mentioned in Patika.dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkan-ozgur/Node.js--lk-Ad-mlar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berkan-ozgur/Node.js--lk-Ad-mlar/issues"
+  },
+  "homepage": "https://github.com/berkan-ozgur/Node.js--lk-Ad-mlar#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
